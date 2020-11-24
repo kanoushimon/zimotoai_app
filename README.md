@@ -1,24 +1,22 @@
-# README
+#地元あいアプリケーション
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+これは、ユーザーが新しい地元を探し、地元が大好きな人同士が繋がるためのアプリケーションです。
+作者：狩野志文
+作成日：2020年
 
-Things you may want to cover:
+#機能紹介
+・ローカルメディアのマップ検索
+・日替わりおすすめの地域とメディア
+・登録ユーザーの投稿・交流機能
 
-* Ruby version
+##ライセンス
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+echo "# zimotoai" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kanoushimon/zimotoai.git
+git push -u origin main
+                
