@@ -1,2 +1,207 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<% provide(:title, "サービス紹介") %>
+
+      <!-- Promo Block -->
+      <section class="js-parallax u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white" style="background-image: url(assets/img-temp/1920x1080/img5.jpg);">
+        <!-- Promo Content -->
+        <div class="container u-overlay__inner u-ver-center u-content-space">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="text-center">
+                <h1 class="display-sm-4 display-lg-3">Jane Moris</h1>
+                <p class="h6 text-uppercase u-letter-spacing-sm mb-2">UI/UX Designer, Stream</p>
+
+                <ul class="list-inline text-center mb-0">
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Facebook">
+                    <a class="text-white" href="#!">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Dribbble">
+                    <a class="text-white" href="#!">
+                      <i class="fab fa-dribbble"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                    <a class="text-white" href="#!">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
+                    <a class="text-white" href="#!">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
+                    <a class="text-white" href="#!">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Promo Content -->
+      </section>
+      <!-- End Promo Block -->
+    </header>
+    <!-- End Header -->
+
+    <main role="main">
+      <!-- About Section -->
+      <section>
+        <div class="container">
+          <!-- Profile Block -->
+          <div class="row">
+            <div class="col-md-4 mx-auto">
+              <div class="u-pull-half text-center">
+                <img class="img-fluid u-avatar u-box-shadow-lg rounded-circle mb-3" width="200" height="auto" src="assets/img-temp/200x200/img1.jpg" alt="Image Description">
+              </div>
+            </div>
+          </div>
+          <!-- End Profile Block -->
+
+          <!-- About and Skills -->
+          <div class="row u-content-space-bottom">
+            <div class="col-lg-6 mb-5 mb-lg-5 pl-lg-5">
+              <h4 class="mb-3">About me</h4>
+              <p>I am an ambitious workaholic, but apart from that, pretty simple person. Whether it's branding, print, UI + UX I've got you covered.</p>
+              <p>I strive to figure out the right solutions for your look to stand out amongst the rest.</p>
+              <p class="blockquote-footer">Jane Moris, UI/UX Designer</p>
+            </div>
+
+            <div class="col-lg-6">
+              <h4 class="mb-3">My skills</h4>
+              <!-- Progress Bar -->
+              <h5 class="u-font-size-90 mb-1">Web Design - 93%</h4>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress Bar -->
+
+              <!-- Progress Bar -->
+              <h5 class="u-font-size-90 mb-1">PHP/WordPress - 76%</h4>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress Bar -->
+
+              <!-- Progress Bar -->
+              <h5 class="u-font-size-90 mb-1">jQuery - 80%</h4>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress Bar -->
+            </div>
+          </div>
+          <!-- End About and Skills -->
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <div class="container">
+        <hr class="my-0">
+      </div>
+
+      <!-- Portfolio -->
+      <section class="u-content-space">
+        <div class="container">
+          <header class="text-center w-md-50 mx-auto mb-8">
+            <h2 class="h1">Branding Works</h2>
+            <p class="h5">We design and develope experiances that make people's lives easy and simple.</p>
+          </header>
+
+          <ul class="js-shuffle-controls u-portfolio-controls text-center mb-5">
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="all" class="active">All</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-illustration">Illustration</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-design">Design</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-graphic">Graphic</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-logo">Logo</a></li>
+          </ul>
+
+          <!-- Work Content -->
+          <div class="js-shuffle u-portfolio row no-gutters mb-6">
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img1.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">IX Project</h6>
+                <small class="d-block">Branding</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img1.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-design"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img2.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Bottle Design</h6>
+                <small class="d-block">Mockup</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img2.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-graphic"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img3.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">App Developement</h6>
+                <small class="d-block">Åpp</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img3.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-logo"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img4.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Just Bored</h6>
+                <small class="d-block">Freetime</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img4.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img5.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Cake Lab</h6>
+                <small class="d-block">Graphic</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img5.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-graphic"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img6.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">NB Project</h6>
+                <small class="d-block">Logo</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img6.jpg">Zoom</a>
+            </figure>
+
+            <!-- sizer -->
+            <figure class="col-sm-6 col-md-4 u-portfolio__item shuffle_sizer"></figure>
+          </div>
+          <!-- End Work Content -->
+
+          <!-- Clints -->
+          <div class="text-center">
+            <ul class="list-unstyled row justify-content-center mb-2">
+              <li class="col-sm-6 col-lg-2">
+                <img class="u-clients__image img-fluid" src="assets/img-temp/partners/img2.png" alt="Image Description">
+              </li>
+              <li class="col-sm-6 col-lg-2">
+                <img class="u-clients__image img-fluid" src="assets/img-temp/partners/img3.png" alt="Image Description">
+              </li>
+              <li class="col-sm-6 col-lg-2">
+                <img class="u-clients__image img-fluid" src="assets/img-temp/partners/img4.png" alt="Image Description">
+              </li>
+              <li class="col-sm-6 col-lg-2">
+                <img class="u-clients__image img-fluid" src="assets/img-temp/partners/img5.png" alt="Image Description">
+              </li>
+            </ul>
+            <p>Got project? <a href="contacts.html">Request a free quote!</a></p>
+          </div>
+          <!-- End Clints -->
+        </div>
+      </section>
+      <!-- End Portfolio -->
+    </main>
+
+ 

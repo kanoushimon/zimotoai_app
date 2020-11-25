@@ -1,4 +1,229 @@
-<% provide(:title, "Home") %>
+<% provide(:title, "") %>
 
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+ <!-- Promo Block -->
+      <section class="js-parallax u-promo-block" style="background-image: url(assets/img-temp/promo/img1.jpg);">
+        <!-- Promo Content -->
+        <div class="container text-white u-ver-center u-content-space">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="text-center">
+                <p class="h6 u-letter-spacing-sm mb-0">さあ、第２の故郷と出会いを</p>
+                <h1 class="display-2 display-md-1 u-font-accent font-weight-light">地元あい</h1>
+                <a href="#js-scroll-to-features" class="text-white font-weight-bold u-font-size-75">サービス紹介</a>
+                <span class="fa fa-angle-down d-block"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+  </header>
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main role="main">
+
+    <section class="bg-light u-content-space border" id="js-scroll-to-features">
+      <div class="container">
+        <header class="text-center w-md-50 mx-auto mb-8">
+          <h2 class="h1">サービス紹介</h2>
+        </header>
+        <div class="row py-5">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="display-4 text-primary mb-2">
+              <i class="fab fa-grav"></i>
+            </div>
+            <a href="#js-scroll-to-map-search" class="h5 font-weight-bold u-font-size-200">地域メディア検索</a>
+            <p>トップに表示されている地図から、簡単に全国の地域メディアにアクセスできます。
+            <br>あなたの気になる地域の情報を発見したり、旅行の準備に活用してください。
+            </p>
+          </div>
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="display-4 text-primary mb-2">
+              <i class="fab fa-connectdevelop"></i>
+            </div>
+            <a href="#js-scroll-to-favorite-region" class="h5 font-weight-bold u-font-size-200">おすすめ地域情報</a>
+            <p>日替わりでおすすめの地域情報を発信します。
+            <br>
+            </p>
+          </div>
+
+          <div class="col-lg-4 mb-2 mb-lg-0">
+            <div class="display-4 text-primary mb-2">
+              <i class="fas fa-cubes"></i>
+            </div>
+            <a href="#js-scroll-to-comments" class="h5 font-weight-bold u-font-size-200">思い出シェア</a>
+            <p>旅の思い出などをシェアしたり、投稿にコメントをつけることができます。
+            <br> 交流を深めて、お互いの地域が好きになっていただければ幸いです。
+            </p>
+          </div>
+        </div> 
+      </div>
+    </section>
+
+      <!-- Search map-->
+      <section class="map-search u-content-space-top border" id="js-scroll-to-map-search">
+        <div class="container text-center">
+          <h2>地域メディア検索</h2>
+          <p class="h5">興味のある地域の地元メディアを覗いてみましょう。<br>きっと、そこにしかない情報が見つかります。</p>
+
+          <div class="search-map-area">
+            <img src="assets/img/map/japan_map.png" alt="日本地図">          
+            <ul class="hokkaidou-region">
+              <li class="hokkaidou"><button type="button" class="js-modal-open btn btn--pill"  data-target="modal01">北海道</button></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <div id="modal01" class="modal js-modal">
+        <div class="modal-wrap">
+          <div class="modal-bg js-modal-close"> </div>
+            <div class="modal-content">
+              <div class="js-modal-close">
+                <i class="far fa-times-circle"></i>
+              </div>
+                <div class="btn-bg bg-1">
+                  <div class="btn btn-1">
+                    <h2>札幌市民が現地のリアルな情報をお届けします</h2>
+                    <button><a target="_blank" href="http://satsutter.com/">サツッター</a></button>
+                  </div>
+                </div>
+                <div class="btn-bg bg-2">
+                  <div class="btn btn-2">
+                    <h2>「人々のリアルな声から街の姿を掘り起こす」をテーマに配信中</h2>
+                    <button href="#">ハコダテとヒト</button>
+                  </div>
+                </div>
+                <div class="btn-bg bg-3">
+                  <div class="btn btn-3">
+                    <h2></h2>
+                    <button href="#">flow away</button>
+                  </div>
+                </div>
+                <div class="btn-bg bg-4">
+                  <div class="btn btn-4">
+                    <h2>Fire</h2>
+                    <button href="#">on the flame</button>
+                  </div>
+                </div>
+                <div class="btn-bg bg-5">
+                  <div class="btn btn-5">
+                    <h2>Windy</h2>
+                    <button href="#">raining drop</button>
+                  </div>
+                </div>
+                <div class="btn-bg bg-6">
+                  <div class="btn btn-6">
+                    <h2>mamba</h2>
+                    <button href="#"><a>long night</a></button>
+                  </div>
+                </div>
+                <div class="btn-bg bg-1">
+                  <div class="btn btn-1">
+                    <h2>If you like it</h2><a href="http://lichin.me">
+                      <button>view my Blog!</button></a>
+                  </div> 
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- End search map -->
+        
+      <!-- Today's favorite region -->
+      <section class="u-content-space-top border" id="js-scroll-to-favorite-region">
+        <div class="container text-center">
+          <h2>今日のおすすめ地域</h3>
+          <p class="h5">今日のおすすめ地域は「北海道」です。<br>ちょっとした説明</p>
+          <img src="assets/img/map/hokkaidou_big.png" class="pt-5 mx-auto d-block" width="500">
+          <button type="button" id="js-show-popup" class="btn btn--pill text-white"><a target="_blank" href="http://satsutter.com/">サツッター</a></button>
+        </div>
+      </section>
+      <!-- End today's favorite region -->
+
+
+      <!-- Share memories -->
+      <section class="u-content-space" id="js-scroll-to-comments">
+        <div class="container">
+          <header class="text-center w-md-50 mx-auto mb-8">
+            <h2>思い出シェア</h2>
+            <p class="h5">あなたの旅の思い出をシェアしてみましょう。<br>違う地域が地元の方と繋がれます。</p>
+          </header>
+
+          <ul class="js-shuffle-controls u-portfolio-controls text-center mb-5">
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="all" class="active">全国</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-illustration">北海道</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-design">東北地方</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-graphic">関東地方</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-logo">中部地方</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-logo">四国地方</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-logo">近畿地方</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="its-logo">九州地方</a></li>
+          </ul>
+
+          <!-- Work Content -->
+          <div class="js-shuffle u-portfolio row no-gutters mb-6">
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img1.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">IX Project</h6>
+                <small class="d-block">Branding</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img1.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-design"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img2.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Bottle Design</h6>
+                <small class="d-block">Mockup</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img2.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-graphic"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img3.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">App Developement</h6>
+                <small class="d-block">Åpp</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img3.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-logo"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img4.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Just Bored</h6>
+                <small class="d-block">Freetime</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img4.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img5.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Cake Lab</h6>
+                <small class="d-block">Graphic</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img5.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-graphic"]'>
+              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img6.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">NB Project</h6>
+                <small class="d-block">Logo</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img6.jpg">Zoom</a>
+            </figure>
+
+            <!-- sizer -->
+            <figure class="col-sm-6 col-md-4 u-portfolio__item shuffle_sizer"></figure>
+          </div>
+          <!-- End Work Content -->
+
+        </div>
+      </section>
+      <!-- End Share memories -->
+    </main>
