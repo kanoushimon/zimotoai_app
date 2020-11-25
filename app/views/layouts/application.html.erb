@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title><%= full_title(yield(:title)) %></title>    
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/head' %>
+    <%= render 'layouts/shim' %>
   </head>
-
   <body>
+    <%= render 'layouts/header'%>
     <%= yield %>
+    <%= render 'layouts/footer' %>
+    
+  <!-- JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
+    <!-- Global Vendor -->
+    <script src="assets/vendors/jquery.min.js"></script>
+    <script src="assets/vendors/jquery.migrate.min.js"></script>
+    <script src="assets/vendors/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Components Vendor  -->
+    <script src="assets/vendors/jquery.parallax.js"></script>
+    <script src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/shuffle/jquery.shuffle.min.js"></script>
+
+    <!-- Theme Settings and Calls -->
+    <script src="assets/js/global.js"></script>
+
+    <!-- Theme Components and Settings -->
+    <script src="assets/js/vendors/parallax.js"></script>
+    <script src="assets/js/vendors/magnific-popup.js"></script>
+    <script src="assets/js/vendors/shuffle.js"></script>
+    <!-- END JAVASCRIPTS -->
+    
   </body>
 </html>
