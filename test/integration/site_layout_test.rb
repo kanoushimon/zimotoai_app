@@ -7,7 +7,6 @@ test "layout links" do
     assert_select "a[href=?]", root_path, count: 2
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
-    get contact_path
-    assert_select "title", full_title("お問合せ")
+    assert_select "a[href=?]", signup_path
   end
 end
