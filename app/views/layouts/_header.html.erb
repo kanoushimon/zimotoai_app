@@ -1,5 +1,4 @@
  <header>
-      <!-- Navbar -->
       <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="root_path">
@@ -30,11 +29,19 @@
               <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <%= link_to 'お問合せ', contact_path, class: "nav-link active"  %>
               </li>
+              <% if logged_in? %>
               <div>
-                <%=link_to 'ログイン', signup_path, class: "btn btn-primary" %>
+                <%=link_to 'ログアウト', logout_path, class: "btn btn-primary" %>
               </div>
+              <% else %>
+              <li class="nav-item mr-4 mb-2 mb-lg-0">
+                <%= link_to '無料登録', signup_path, class: "nav-link active"  %>
+              </li>
+              <div>
+                <%=link_to 'ログイン', login_path, class: "btn btn-primary" %>
+              </div>
+              <% end %>
             </ul>
           </div>
         </div>
       </nav>
-      <!-- End Navbar -->
