@@ -51,5 +51,10 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+
+#異なる種類のブラウザで一方はログアウト、他方はブラウザを閉じただけの時、cookiesが残った状態でブラウザを再表示したときのエラーに対して
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
   
 end
