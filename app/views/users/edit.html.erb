@@ -1,0 +1,14 @@
+<% provide(:title, 'プロフィール更新') %>
+<h1>プロフィール更新</h1>
+
+<div class="container" style="margin-top:100px;">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= render 'form' %>
+      <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <a href="https://gravatar.com/emails" target="_blank">change</a>
+      </div>
+    </div>
+  </div>
+</div>

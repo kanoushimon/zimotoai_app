@@ -21,7 +21,7 @@
                 <%= link_to 'ホーム', root_path, class: "nav-link active" %>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link active" href="#">思い出シェア</a>
+                <%= link_to '思い出シェア', memories_path, class: "nav-link active"  %>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <%= link_to 'サービス紹介', about_path, class: "nav-link active"  %>
@@ -31,7 +31,7 @@
               </li>
               <% if logged_in? %>
               <div>
-                <%=link_to 'ログアウト', logout_path, class: "btn btn-primary" %>
+                <%=button_to 'ログアウト', "/logout", method: :delete, class: "btn btn-primary" %>
               </div>
               <% else %>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
