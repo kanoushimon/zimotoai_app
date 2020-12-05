@@ -33,4 +33,9 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+  
+  
+  def posts
+    return Post.where(user_id: self.id)
+  end
 end
