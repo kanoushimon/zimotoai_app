@@ -9,6 +9,7 @@
           <%= @user.name %>
         </h1>
         <%=link_to "プロフィール設定", edit_user_path(current_user) %>
+        <%=link_to "思い出を書き出す", new_post_path(current_user) %>
       </section>
     </aside>
   </div>
