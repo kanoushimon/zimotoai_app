@@ -3,6 +3,7 @@
   <aside class="col-md-4">
     <section class="user_info">
       <%= @post.content %>
+      <%= link_to "思い出を書き直す", edit_post_path(current_user) %>
     </section>
   </aside>
 </div>
