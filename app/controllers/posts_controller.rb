@@ -1,18 +1,23 @@
 class PostsController < ApplicationController
-  # before_action :logged_in_user, only: [:new, :create, :edit, :update]
-  
+
+  def index
+    @posts = Post.all
+  end
+
   def new
     @post = Post.new
   end
   
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
+
     if @post.save
-      flash[:success] = "思い出が記録されました。"
+      flash[:success] = "素敵な思い出が記録されました。"
+      redirect_to posts_path
     else
       flash[:notice] = "思い出が記録できませんでした。"
+      render 'new'
     end
-    render 'new'
   end
   
   def show
@@ -27,17 +32,22 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:success] = "思い出が更新されました。"
-      redirect_to @post
     else
       flash[:notice] = "思い出が更新できませんでした。"
-      render 'edit'
     end
+    redirect_to @post
+  end
+  
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:success] = "投稿が削除されました。"
+    redirect_to root_url
   end
   
   private
   
   def post_params
-    params.require(:post).permit(:content)
+    params.require(:post).permit(:name, :text, :content, :image)
   end
-
 end

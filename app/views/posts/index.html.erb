@@ -1,22 +1,20 @@
 <div class="container" style="margin-top:100px;">
   <div class="contents row">
-    <div class="content_post" style="background-image: url(<%= @post.image %>);">
-      <div class="more">
+    <% @posts.each do |post| %>
+      <div class="content_post" style="background-image: url(<%= post.image %>);">
+        <p><%= post.text %></p>
+        <span class="name">
+          <%= post.name %>
+        </span>
         <ul class="more_list">
           <li>
-            <%= link_to "思い出を書き直す", edit_post_path(current_user) %>
+            <%= link_to '詳細をみる', post_path(post.id), method: :get %>
           </li>
           <li>
             <%= link_to '削除', @post, method: :delete, data: { confirm: "削除してよろしいでしょうか？" } %>
           </li>
         </ul>
       </div>
-      <p><%= @post.text %></p>
-      <span class="name"><%= @post.name %>
-      </span>
-    </div>
+    <% end %>
   </div>
 </div>
-
-
-
