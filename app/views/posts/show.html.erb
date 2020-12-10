@@ -12,10 +12,11 @@
         </ul>
       </div>
       <p><%= @post.text %></p>
-      <span class="name"><%= @post.name %>
-      </span>
+      <span class="name"><%= @post.name %></span>
+      <p><%= @post.content %></p>
     </div>
   </div>
+  <p><%= link_to '戻る', 'javascript:history.back()' %></p>
 </div>
 
 

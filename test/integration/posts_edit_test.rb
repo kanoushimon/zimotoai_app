@@ -8,10 +8,10 @@ class PostsEditTest < ActionDispatch::IntegrationTest
   test "scccessful edit" do
     get edit_post_path(@post)
     assert_template 'posts/edit'
-    name = "sample1"
-    text = "旅行の思い出"
-    content = "ここに行ってきました。"
-    image = "sample1.png"
+    name = "example name1"
+    text = "example text1"
+    content = "example content1"
+    image = "example image1"
     patch post_path(@post), params: {post: {name: name, text: text, content: content, image: image}}
     assert_not flash.empty?
     assert_redirected_to @post

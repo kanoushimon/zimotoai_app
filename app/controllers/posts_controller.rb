@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -10,7 +11,6 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(post_params)
-
     if @post.save
       flash[:success] = "素敵な思い出が記録されました。"
       redirect_to posts_path
@@ -21,11 +21,9 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = Post.find(params[:id])
   end
   
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
@@ -39,7 +37,6 @@ class PostsController < ApplicationController
   end
   
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     flash[:success] = "投稿が削除されました。"
     redirect_to root_url
@@ -49,5 +46,9 @@ class PostsController < ApplicationController
   
   def post_params
     params.require(:post).permit(:name, :text, :content, :image)
+  end
+  
+  def set_post
+    @post = Post.find(params[:id])
   end
 end

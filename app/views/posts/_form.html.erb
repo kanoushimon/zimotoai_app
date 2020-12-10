@@ -6,3 +6,4 @@
       <%= f.text_area :content, placeholder: "あなたの思い出を記録しましょう。", rows: "10" %>
       <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>
+    <p><%= link_to '戻る', 'javascript:history.back()' %></p>
