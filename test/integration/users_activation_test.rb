@@ -19,4 +19,5 @@ class UsersActivationTest < ActionDispatch::IntegrationTest
     get user_path(@non_activated_user)
     assert_redirected_to root_url
   end
+
 end
