@@ -7,17 +7,17 @@ class MicropostsController < ApplicationController
     @micropost.image.attach(params[:micropost][:image])
     if @micropost.save
       flash[:success] = "思い出が投稿されました。"
-      redirect_to root_url
+      redirect_to contact_url
     else
       @feed_items = current_user.feed.paginate(page: params[:page])
-      render 'static_pages/home'
+      render 'static_pages/contact'
     end
   end
 
   def destroy
     @micropost.destroy
     flash[:success] = "投稿が削除されました。"
-    redirect_to request.referrer || root_url
+    redirect_to request.referrer || contact_url
   end
 
   private

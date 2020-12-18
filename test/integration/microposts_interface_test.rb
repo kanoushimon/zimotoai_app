@@ -7,7 +7,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
 
   test "micropost interface" do
     log_in_as(@user)
-    get root_path
+    get contact_path
     assert_select 'div.pagination'
     assert_select 'input[type="file"]'
     # 無効な送信
@@ -15,7 +15,6 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
       post microposts_path, params: { micropost: { content: "" } }
     end
     assert_select 'div#error_explanation'
-    assert_select 'a[href=?]', '/?page=2'  # 正しいページネーションリンク
     # 有効な送信
     content = "This micropost really ties the room together"
     image = fixture_file_upload('test/fixtures/kitten.jpg', 'image/jpeg')
@@ -23,7 +22,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
       post microposts_path, params: { micropost: { content: content, image: image } }
     end
     assert assigns(:micropost).image.attached?
-    assert_redirected_to root_url
+    assert_redirected_to contact_url
     follow_redirect!
     assert_match content, response.body
     # 投稿を削除する
@@ -39,15 +38,15 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   
   test "micropost sidebar count" do
     log_in_as(@user)
-    get root_path
+    get contact_path
     assert_match "#{@user.microposts.count} 個の思い出", response.body
     # まだマイクロポストを投稿していないユーザー
     other_user = users(:malory)
     log_in_as(other_user)
-    get root_path
+    get contact_path
     assert_match "0 個の思い出", response.body
     other_user.microposts.create!(content: "A 個の思い出")
-    get root_path
+    get contact_path
     assert_match "1 個の思い出", response.body
   end
 end

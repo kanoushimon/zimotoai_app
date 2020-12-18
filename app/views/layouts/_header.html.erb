@@ -23,14 +23,14 @@
             <%= link_to 'ホーム', root_path, class: "nav-link active" %>
           </li>
           <li class="nav-item mr-4 mb-2 mb-lg-0">
-            <%= link_to '思い出シェア', contact_path, class: "nav-link active"  %>
+            <%= link_to 'サービス紹介', about_path, class: "nav-link active"  %>
           </li>
           <li class="nav-item mr-4 mb-2 mb-lg-0">
-            <%= link_to 'サービス紹介', about_path, class: "nav-link active"  %>
+            <%= link_to '思い出シェア', contact_path, class: "nav-link active"  %>
           </li>
           <% if logged_in? %>
             <li class="nav-item mr-4 mb-2 mb-lg-0">
-            <%= link_to '個人ページ', current_user, class: "nav-link active"  %>
+            <%= link_to '私の思い出', current_user, class: "nav-link active"  %>
             </li>
             <%=button_to 'ログアウト', "/logout", method: :delete, class: "btn btn-primary" %>
           <% else %>
