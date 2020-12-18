@@ -1,52 +1,47 @@
  <header>
-      <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="root_path">
-                <%= link_to "地元あい", root_path, id: "logo" %>
-          </a>
-
-          <button class="navbar-toggler" type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerDemo"
-
-            aria-controls="navbarTogglerDemo"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <%= link_to 'ホーム', root_path, class: "nav-link active" %>
-              </li>
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <%= link_to '思い出シェア', "#", class: "nav-link active"  %>
-              </li>
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <%= link_to 'サービス紹介', about_path, class: "nav-link active"  %>
-              </li>
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <%= link_to 'お問合せ', contact_path, class: "nav-link active"  %>
-              </li>
-              <% if logged_in? %>
-              <div>
-                <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <%= link_to '個人ページ', current_user, class: "nav-link active"  %>
-                </li>
-                <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <%=button_to 'ログアウト', "/logout", method: :delete, class: "btn btn-primary" %>
-                </li>
-              </div>
-              <% else %>
-              <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <%= link_to '無料登録', signup_path, class: "nav-link active"  %>
-              </li>
-              <div>
-                <%=link_to 'ログイン', login_path, class: "btn btn-primary" %>
-              </div>
-              <% end %>
-            </ul>
+  <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark" style="background-color :#672e8d; width:100%;">
+    <div class="container-fluid">
+          <div class="navbar-brand">
+            <%= link_to root_path do %>
+              <%= image_tag 'zimotoai.png', size: "300x70", alt: "地元あい" %>
+            <% end %>
           </div>
-        </div>
-      </nav>
+
+      <button class="navbar-toggler" type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo"
+
+        aria-controls="navbarTogglerDemo"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <%= link_to 'ホーム', root_path, class: "nav-link active" %>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <%= link_to '思い出シェア', contact_path, class: "nav-link active"  %>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <%= link_to 'サービス紹介', about_path, class: "nav-link active"  %>
+          </li>
+          <% if logged_in? %>
+            <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <%= link_to '個人ページ', current_user, class: "nav-link active"  %>
+            </li>
+            <%=button_to 'ログアウト', "/logout", method: :delete, class: "btn btn-primary" %>
+          <% else %>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <%= link_to '無料登録', signup_path, class: "nav-link active"  %>
+          </li>
+            <%=link_to 'ログイン', login_path, class: "btn btn-primary" %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+

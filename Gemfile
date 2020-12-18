@@ -20,6 +20,8 @@ gem 'bootsnap',   '1.4.5', require: false
 # gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'rails-i18n'
+
 
 
 
