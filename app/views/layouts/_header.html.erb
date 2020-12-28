@@ -1,9 +1,9 @@
- <header>
-  <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark" style="background-color :#672e8d; width:100%;">
+ <header role="header">
+  <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark" style="background-color :rgba(98, 42, 136, 0.7); width:100%;">
     <div class="container-fluid">
           <div class="navbar-brand">
             <%= link_to root_path do %>
-              <%= image_tag 'zimotoai.png', size: "300x70", alt: "地元あい" %>
+              <%= image_tag 'zimotoai.png', size: "280x60", alt: "地元あい", class: "none" %>
             <% end %>
           </div>
 
@@ -17,24 +17,24 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          <li class="nav-item mr-4 mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo" aria-hidden="true">
+        <ul class="navbar-nav ml-auto mt-0">
+          <li class="nav-item mr-4 mb-0">
             <%= link_to 'ホーム', root_path, class: "nav-link active" %>
           </li>
-          <li class="nav-item mr-4 mb-2 mb-lg-0">
+          <li class="nav-item mr-4 mb-0">
             <%= link_to 'サービス紹介', about_path, class: "nav-link active"  %>
           </li>
-          <li class="nav-item mr-4 mb-2 mb-lg-0">
+          <li class="nav-item mr-4 mb-0">
             <%= link_to '思い出シェア', contact_path, class: "nav-link active"  %>
           </li>
           <% if logged_in? %>
-            <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <li class="nav-item mr-4 mb-0">
             <%= link_to '私の思い出', current_user, class: "nav-link active"  %>
             </li>
             <%=button_to 'ログアウト', "/logout", method: :delete, class: "btn btn-primary" %>
           <% else %>
-          <li class="nav-item mr-4 mb-2 mb-lg-0">
+          <li class="nav-item mr-4 mb-0">
             <%= link_to '無料登録', signup_path, class: "nav-link active"  %>
           </li>
             <%=link_to 'ログイン', login_path, class: "btn btn-primary" %>
@@ -44,4 +44,3 @@
     </div>
   </nav>
 </header>
-

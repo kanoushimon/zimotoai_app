@@ -21,4 +21,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get contact_path
     assert_response :success
   end
+  
+  test "need login for contact" do
+    get contact_path
+    assert_redirected_to login_url
+  end
 end

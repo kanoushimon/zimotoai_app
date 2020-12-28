@@ -1,4 +1,17 @@
-    #users
+  #local media
+require "csv"
+
+CSV.foreach('db/local_media.csv', headers: true) do |row|
+  LocalMedium.create(
+    prefecture: row['prefecture'],
+    site: row['site'],
+    site_url: row['site_url'],
+    intro: row['intro']
+  )
+end
+
+
+  #users
 User.create!(name:  "Example User",
              email: "example@railstutorial.org",
              password:              "foobar",
@@ -33,3 +46,4 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+

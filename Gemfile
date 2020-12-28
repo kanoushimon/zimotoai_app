@@ -21,7 +21,7 @@ gem 'bootsnap',   '1.4.5', require: false
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'rails-i18n'
-
+gem 'roo'
 
 
 

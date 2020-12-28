@@ -1,7 +1,7 @@
 <% provide(:title, "サービス紹介") %>
 
       <!-- Promo Block -->
-      <section class="js-parallax u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white" style="background-image: url(assets/img-temp/1920x1080/img5.jpg);">
+      <section class="js-parallax u-promo-block u-promo-block--mheight-500 u-overlay u-overlay--dark text-white" style="background-image: url(assets/about.jpg);">
         <!-- Promo Content -->
         <div class="container u-overlay__inner u-ver-center u-content-space">
           <div class="row justify-content-center">
@@ -16,9 +16,11 @@
     </header>
 
     <main role="main">
-      <section>
+      <section class="bg-light u-content-space border">
         <div class="container">
-          <h2 class="display-sm-4">３つのメイン機能</h2>
+          <header class="text-center w-md-50 mx-auto mb-8">
+            <h2 class="h1">３つのメイン機能</h2>
+          </header>
            <div class="row py-5">
             <div class="col-lg-4 mb-5 mb-lg-0">
               <div class="display-4 text-primary mb-2">
@@ -34,10 +36,9 @@
               <div class="display-4 text-primary mb-2">
                 <i class="fab fa-connectdevelop"></i>
               </div>
-              <a href="#js-scroll-to-favorite-region" class="h5 font-weight-bold u-font-size-200">おすすめ地域情報</a>
-              <p>日替わりでおすすめの地域情報を発信します。
-              <br>きっと知らなかった素敵な地域メディアが見つかるでしょう。
-              </p>
+              <a href="#js-scroll-to-favorite-region" class="h5 font-weight-bold u-font-size-200">新地域開拓</a>
+            <p>おすすめの地域メディアをお伝えします。
+            <br>まだ知らない素敵な地域が見つかるでしょう。
             </div>
   
             <div class="col-lg-4 mb-2 mb-lg-0">
@@ -56,19 +57,37 @@
       </section>
       <!-- End About Section -->
       
-      <section>
+      <section class="bg-light border">
        <div class="container">
-          <h2 class="display-sm-4">地元あいへの思い</h2>
-          <p></p>
-        </div>
-          
+          <header class="text-center w-md-50 mx-auto mb-8">
+            <h2 class="h1">地元あいへの想い</h2>
+          </header>
+          <div class="split">
+          <%= image_tag "/assets/hand-shake.jpeg", class: "pic none pb-4 mr-4" %>
+          <p>
+              日本の少子化と若者の都市部への集中により、地方の人口は減少傾向にあります。
+          </br>それに対し、都会の喧騒を離れて地方移住をするという選択肢も増えてきています。
+          </br>しかし、「どこが自分に合っているか？」「どんな特徴があるのか？」など、地元民やその地域メディアにしかない情報がたくさんあります。
+          </br>そこで、地元あいは、みなさんが各地域の情報を集めやすいように、「地域メディア検索」機能をご提供します。
+          </br>旅行先を探す際にも、活用していただければ幸いです。
+          </br>また、「思い出シェア」機能では、各地域での思い出を投稿し共有できます。
+          </br>特に、移住を考えている方は、移住前に地元民と交流をすることで、新天地での不安が軽減されると思います。
+          </br>多くの地域の人々が繋がってくださることを願っています。
+          </p>
+          </div>
+      
         </div>
       </section>
       
-      <section>
+      <section class="bg-light border">
        <div class="container">
-          <h2 class="display-sm-4">お問合せ</h2>
-          <p></p>
+          <header class="text-center w-md-50 mx-auto mb-8">
+            <h2 class="h1">お問合せ</h2>
+          </header>
+          <div style="text-align:center">
+          <p>問合せ先： zimotoai2020@gmail.com</p>
+          <p>＊新規メディア掲載や削除依頼など、お気軽にご連絡ください。</p>
+          </div>
         </div>
           
         </div>

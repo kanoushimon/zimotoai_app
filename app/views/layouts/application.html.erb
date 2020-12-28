@@ -19,6 +19,8 @@
     <!--<link rel="stylesheet" type="text/css" href="assets/vendors/font-awesome/css/fontawesome-all.min.css">-->
     <!--<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.css">-->
     <!--<link rel="stylesheet" type="text/scss" href="app/assets/stylesheets/mystyles.scss">-->
+    
+    
   
     <%= render 'layouts/shim' %>
   </head>
@@ -37,8 +39,7 @@
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/vendors/jquery.migrate.min.js"></script>
     <script src="assets/vendors/popper.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap
-    .min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Components Vendor  -->
     <script src="assets/vendors/jquery.parallax.js"></script>
@@ -53,8 +54,9 @@
     <script src="assets/js/vendors/magnific-popup.js"></script>
     <script src="assets/js/vendors/shuffle.js"></script>
     
-     <script>
-      $('.js-modal-open').on('click', function(){
+    <!--<script src="app/assets/javascripts/modal.js"></script>-->
+    <script>
+    $('.js-modal-open').on('click', function(){
       var target = $(this).data('target');
       var modal = document.getElementById(target);
       scrollPosition = $(window).scrollTop();
@@ -64,7 +66,6 @@
       return false;
     });
     
-    // モーダルウィンドウを閉じる
     $('.js-modal-close').on('click', function(){
       $('body').removeClass('fixed');
       window.scrollTo( 0 , scrollPosition );
@@ -72,6 +73,7 @@
       return false;
     });
     </script>
+    
     <!-- END JAVASCRIPTS -->
     
   </body>

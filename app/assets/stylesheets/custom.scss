@@ -2,53 +2,69 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
 .navbar-brand{
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
+@media screen and (max-width: 991px){
+.none {
+  display:none
+  }
+}
+
+.brand{
+  max-width:100%;
+  height:70px;
+}
+
 .alert{
   margin-top:90px;
 }
 
+.memory-share{
+  color:black;
+}
 
 /* modal window */
-/* モーダル全体(背景＋本体) */
-.modal {
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.modal{
   display: none;
   position: fixed;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
 /* モーダル背景 */
-.modal-bg {
+.modal-bg{
   position: absolute;
   height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.8);
 }
 
-/* モーダル本体 */
-.modal-content {
+.modal-content{
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  overflow: scroll;
-  /* はみ出た部分はスクロールさせる */
-  height: 80%;
-  /* これが無いと「overflow:scroll」が利かない */
+  transform: translate(-50%, -50%);
+  overflow: scroll; 
+  height: 60%;
   width: 60%;
-  /* これが無いと「overflow:scroll」が利かない */
   background: white;
-  padding:10px 20px 20px 20px;
+  padding: 40px;
+  padding: 40px;
 }
 
-/* モーダルウィンドウ表示中に記事本体を固定 */
 body.fixed {
   position: fixed;
   width: 100%;
@@ -56,309 +72,6 @@ body.fixed {
   left: 0;
 }
 
-/* Lists of URL to local websites */
-.btn-bg {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-}
-.btn-bg.bg-1 {
-  background: #6ab1c9;
-}
-.btn-bg.bg-1 .btn-1 button {
-  color: #c7f8f9;
-  background: transparent;
-  border: 3px solid #c7f8f9;
-  border-radius: 5px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.btn-bg.bg-1 .btn-1 button a {
-  color: #c7f8f9;
-}
-.btn-bg.bg-1 .btn-1 button:hover {
-  background: #c7f8f9;
-  color: #6ab1c9;
-  border: 3px solid #6ab1c9;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-.btn-bg.bg-1 .btn-1 button:hover >a {
-  color: #6ab1c9;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-.btn-bg.bg-1 .btn-1 button:active {
-  -webkit-transform: translate(5px, 5px);
-  transform: translate(5px, 5px);
-}
-.btn-bg.bg-2 {
-  background: #78c98d;
-}
-.btn-bg.bg-2 .btn-2 button {
-  color: #78c98d;
-  background: #d0f9c7;
-  border: none;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-}
-.btn-bg.bg-2 .btn-2 button:hover {
-  background: transparent;
-  color: #d0f9c7;
-}
-.btn-bg.bg-2 .btn-2 button:hover:before,
-.btn-bg.bg-2 .btn-2 button:hover:after {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  width: 100%;
-}
-.btn-bg.bg-2 .btn-2 button:before,
-.btn-bg.bg-2 .btn-2 button:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0px;
-  width: 0px;
-  height: 3px;
-  background: #d0f9c7;
-  transition: all 0.4s ease;
-}
-.btn-bg.bg-2 .btn-2 button:after {
-  top: inherit;
-  left: inherit;
-  bottom: 0;
-  right: 0;
-}
-.btn-bg.bg-3 {
-  background: #e5d272;
-}
-.btn-bg.bg-3 .btn-3 button {
-  color: #e5d272;
-  background: #f6f7c5;
-  border: none;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.btn-bg.bg-3 .btn-3 button:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  background: transparent;
-  color: #f6f7c5;
-}
-.btn-bg.bg-3 .btn-3 button:hover:after {
-  transition: all 0.3s ease;
-  width: 100%;
-  left: 0;
-}
-.btn-bg.bg-3 .btn-3 button:after {
-  position: absolute;
-  transition: all 0.3s ease;
-  content: '';
-  width: 0;
-  bottom: 0;
-  left: inherit;
-  right: 0;
-  height: 3px;
-  background: #f6f7c5;
-}
-.btn-bg.bg-4 {
-  background: #ed6a5a;
-}
-.btn-bg.bg-4 .btn-4 button {
-  color: #eda39a;
-  border-radius: 5px;
-  background: radial-gradient(circle, #ed412a 0.25em, transparent 0.25em) center/1.2em 1.2em;
-  border: 3px solid #ed412a;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.btn-bg.bg-4 .btn-4 button:hover {
-  color: #fff;
-  background: radial-gradient(circle, #ed412a 0.25em, transparent 0.25em) center/0.1em 0.1em;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.btn-bg.bg-5 {
-  background: #fff;
-}
-.btn-bg.bg-5 .btn-5 h2 {
-  color: #c4c0c0;
-}
-.btn-bg.bg-5 .btn-5 button {
-  color: #c4c0c0;
-  background: transparent;
-  border: 3px solid #c4c0c0;
-  border-radius: 5px;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-.btn-bg.bg-5 .btn-5 button:hover {
-  border-color: #50514f;
-  color: #50514f;
-  background-image: repeating-linear-gradient(-25deg, #c4c0c0, #c4c0c0 3px, transparent 4px, transparent 7px);
-  background-size: 12px 16px;
-  -webkit-animation: cloud-animation 1.25s infinite ease;
-  animation: cloud-animation 1.25s infinite ease;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-.btn-bg.bg-6 {
-  background: #ac7ee5;
-}
-.btn-bg.bg-6 .btn-6 button {
-  width: 11em;
-  height: 3em;
-  color: #d3b7f7;
-  background: transparent;
-  border: 3px solid #d3b7f7;
-  border-radius: 5px;
-  -webkit-transition: border 0.5s ease-out;
-  transition: border 0.5s ease-out;
-  transition-delay: 0.8s;
-}
-.btn-bg.bg-6 .btn-6 button a {
-  position: absolute;
-  z-index: 2;
-  left: 43px;
-  top: 17px;
-}
-.btn-bg.bg-6 .btn-6 button::before,
-.btn-bg.bg-6 .btn-6 button::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  content: 'LONG NIGHT';
-  border-radius: 50%;
-  display: block;
-  width: 22em;
-  height: 22em;
-  left: -5.5em;
-  text-align: center;
-  -webkit-transition: box-shadow 0.5s ease-out;
-  transition: box-shadow 0.5s ease-out;
-  transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  z-index: 1;
-}
-.btn-bg.bg-6 .btn-6 button::after {
-  transition-delay: 0.25s;
-  -webkit-transition-delay: 0.25s;
-}
-.btn-bg.bg-6 .btn-6 button:hover {
-  color: #fff;
-  border-color: #8460af;
-  animation: witch-word-color 1.5s ease;
-  -webkit-transition: border 0.2s ease;
-  transition: border 0.2s ease;
-}
-.btn-bg.bg-6 .btn-6 button:hover::before {
-  box-shadow: inset 0 0 0 11em #b657e5;
-  transition-delay: 0.05s;
-}
-.btn-bg.bg-6 .btn-6 button:hover::after {
-  box-shadow: inset 0 0 0 11em #8460af;
-  transition-delay: 0.5s;
-}
-.btn {
-  margin: 0 auto 30px auto;
-  display: block;
-}
-h2 {
-  text-align: center;
-  font-family: 'Raleway';
-  font-weight: 600;
-  color: #fff;
-}
-button {
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  color: #fff;
-  position: relative;
-  letter-spacing: 0.1em;
-  font-weight: 400;
-  padding: 1rem 3rem 1rem 3rem;
-  text-transform: uppercase;
-  font-family: "Lato";
-  font-size: 1.5em;
-}
-button a {
-  text-decoration: none;
-}
-@-moz-keyframes cloud-animation {
-  100% {
-    background-position: 0px 2em;
-  }
-}
-@-webkit-keyframes cloud-animation {
-  100% {
-    background-position: 0px 2em;
-  }
-}
-@-o-keyframes cloud-animation {
-  100% {
-    background-position: 0px 2em;
-  }
-}
-@keyframes cloud-animation {
-  100% {
-    background-position: 0px 2em;
-  }
-}
-@-moz-keyframes witch-word-color {
-  0% {
-    color: #d3b7f7;
-  }
-  50% {
-    color: #50514f;
-  }
-  100% {
-    color: #fff;
-  }
-}
-@-webkit-keyframes witch-word-color {
-  0% {
-    color: #d3b7f7;
-  }
-  50% {
-    color: #50514f;
-  }
-  100% {
-    color: #fff;
-  }
-}
-@-o-keyframes witch-word-color {
-  0% {
-    color: #d3b7f7;
-  }
-  50% {
-    color: #50514f;
-  }
-  100% {
-    color: #fff;
-  }
-}
-@keyframes witch-word-color {
-  0% {
-    color: #d3b7f7;
-  }
-  50% {
-    color: #50514f;
-  }
-  100% {
-    color: #fff;
-  }
-}
 
 /* miscellaneous */
 
@@ -555,3 +268,687 @@ span.image {
   }
 }
 
+// search-map
+
+.search-map-area {
+  position: relative;
+}
+
+.search-map-area ul {
+  padding: 1px;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+}
+
+.search-map-area ul li {
+  text-decoration: none;
+  list-style: none;
+  padding-bottom: 2px;
+}
+
+.search-map-area ul li button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .brand{
+      max-width:100%;
+      height:100%;
+    }
+  
+    .inner {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    }
+  
+    .search-map-area ul {
+      padding: 1px;
+      border-radius: 5px;
+      border: 3px solid lightgray;
+    }
+  
+    // 北海道
+    .hokkaidou-region {
+      position: absolute;
+      top: 23%;
+      left: 68%;
+      margin: 0;
+      padding: 0;
+      border: 1px solid white;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .search-map-area ul {
+      padding: 1px;
+      border-radius: 5px;
+      border: 3px solid lightgray;
+    }
+    
+    .search-map-area ul li .btn {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+    }
+  
+      .hokkaidou-region {
+      position: absolute;
+      top: 20%;
+      left: 86%;
+      margin: 0;
+    }
+    
+    // 東北地方
+    .touhoku-region {
+      position: absolute;
+      top: 30%;
+      left: 86%;
+      margin: 0;
+    }
+    
+    .touhoku-region1 {
+      position: absolute;
+      top: 30%;
+      left: 73%;
+      margin: 0;
+    }
+    
+    // 関東地方
+    .kantou-region {
+      position: absolute;
+      top: 55%;
+      left: 86%;
+      margin: 0;
+    }
+    
+    .kantou-region1 {
+      position: absolute;
+      top: 55%;
+      left: 73%;
+      margin: 0;
+    }
+    
+    //中部地方 
+    .tyubu-region {
+      position: absolute;
+      top: 6%;
+      left: 45%;
+      margin: 0;
+    }
+    
+    .tyubu-region1 {
+      position: absolute;
+      top: 6%;
+      left: 32%;
+      margin: 0;
+    }
+    
+    // 近畿地方
+    .kinki-region {
+      position: absolute;
+      top: 6%;
+      left: 16%;
+      margin: 0;
+    }
+    
+    .kinki-region1 {
+      position: absolute;
+      top: 6%;
+      left: 3%;
+      margin: 0;
+    }
+    
+    //中国地方
+    .tyugoku-region {
+      position: absolute;
+      top: 40%;
+      left: 42%;
+      margin: 0;
+    }
+    
+    .tyugoku-region1 {
+      position: absolute;
+      top: 40%;
+      left: 29%;
+      margin: 0;
+    }
+    
+    // 四国地方
+    .shikoku-region {
+      position: absolute;
+      top: 84%;
+      left: 25%;
+      margin: 0;
+    }
+    
+    .shikoku-region1 {
+      position: absolute;
+      top: 84%;
+      left: 38%;
+      margin: 0;
+    }
+    
+    // 九州地方
+    .kyusyu-region {
+      position: absolute;
+      top: 40%;
+      left: 0%;
+      margin: 0;
+    }
+    
+    .kyusyu-region1 {
+      position: absolute;
+      top: 40%;
+      left: 13%;
+      margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 992px) and ( max-width: 1199px) {
+    // 北海道
+    .hokkaidou-region {
+      position: absolute;
+      top: 14%;
+      left: 77%;
+      margin: 0;
+    }
+    
+    // 東北地方
+    .touhoku-region {
+      position: absolute;
+      top: 27%;
+      left: 77%;
+      margin: 0;
+    }
+    
+    .touhoku-region1 {
+      position: absolute;
+      top: 27%;
+      left: 65%;
+      margin: 0;
+    }
+
+    // 関東地方
+    .kantou-region {
+      position: absolute;
+      top: 53%;
+      left: 77%;
+      margin: 0;
+    }
+    
+    .kantou-region1 {
+      position: absolute;
+      top: 53%;
+      left: 65%;
+      margin: 0;
+    }
+    
+    //中部地方 
+    .tyubu-region {
+      position: absolute;
+      top: 8%;
+      left: 43%;
+      margin: 0;
+    }
+    
+    .tyubu-region1 {
+      position: absolute;
+      top: 8%;
+      left: 31%;
+      margin: 0;
+    }
+    
+    // 近畿地方
+    .kinki-region {
+      position: absolute;
+      top: 8%;
+      left: 16%;
+      margin: 0;
+    }
+    
+    .kinki-region1 {
+      position: absolute;
+      top: 8%;
+      left: 4%;
+      margin: 0;
+    }
+    
+    //中国地方
+    .tyugoku-region {
+      position: absolute;
+      top: 42%;
+      left: 0%;
+      margin: 0;
+    }
+    
+    .tyugoku-region1 {
+      position: absolute;
+      top: 42%;
+      left: 12%;
+      margin: 0;
+    }
+    
+    // 四国地方
+    .shikoku-region {
+      position: absolute;
+      top: 83%;
+      left: 28%;
+      margin: 0;
+    }
+    
+    .shikoku-region1 {
+      position: absolute;
+      top: 83%;
+      left: 40%;
+      margin: 0;
+    }
+
+    // 九州地方
+    .kyusyu-region {
+      position: absolute;
+      top: 67%;
+      left: 0%;
+      margin: 0;
+    }
+    
+    .kyusyu-region1 {
+      position: absolute;
+      top: 67%;
+      left: 12%;
+      margin: 0;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+    // 北海道
+    .hokkaidou-region {
+      position: absolute;
+      top: 12%;
+      left: 75%;
+      margin: 0;
+    }
+    
+    // 東北地方
+    .touhoku-region {
+      position: absolute;
+      top: 25%;
+      left: 75%;
+      margin: 0;
+    }
+    
+    .touhoku-region1 {
+      position: absolute;
+      top: 25%;
+      left: 65%;
+      margin: 0;
+    }
+    
+    // 関東地方
+    .kantou-region {
+      position: absolute;
+      top: 53%;
+      left: 75%;
+      margin: 0;
+    }
+    
+    .kantou-region1 {
+      position: absolute;
+      top: 53%;
+      left: 65%;
+      margin: 0;
+    }
+    
+    //中部地方 
+    .tyubu-region {
+      position: absolute;
+      top: 8%;
+      left: 45%;
+      margin: 0;
+    }
+    
+    .tyubu-region1 {
+      position: absolute;
+      top: 8%;
+      left: 35%;
+      margin: 0;
+    }
+    
+    // 近畿地方
+    .kinki-region {
+      position: absolute;
+      top: 8%;
+      left: 23%;
+      margin: 0;
+    }
+    
+    .kinki-region1 {
+      position: absolute;
+      top: 8%;
+      left: 13%;
+      margin: 0;
+    }
+    
+    //中国地方
+    .tyugoku-region {
+      position: absolute;
+      top: 39%;
+      left: 0%;
+      margin: 0;
+    }
+    
+    .tyugoku-region1 {
+      position: absolute;
+      top: 39%;
+      left: 10%;
+      margin: 0;
+    }
+    
+    // 四国地方
+    .shikoku-region {
+      position: absolute;
+      top: 83%;
+      left: 32%;
+      margin: 0;
+    }
+    
+    .shikoku-region1 {
+      position: absolute;
+      top: 83%;
+      left: 42%;
+      margin: 0;
+    }
+    
+    // 九州地方
+    .kyusyu-region {
+      position: absolute;
+      top: 65%;
+      left: 0%;
+      margin: 0;
+    }
+    
+    .kyusyu-region1 {
+      position: absolute;
+      top: 65%;
+      left: 10%;
+      margin: 0;
+    }
+}
+
+// prefecture btn-color 
+
+    .hokkaidou button {
+      margin: 0;
+      background-color: #748ce4;
+    }
+
+    .touhoku button {
+      margin: 0;
+      background-color: #5da2e5;
+    }
+    
+    .touhoku1 button {
+      margin: 0;
+      background-color: #5da2e5;
+    }
+    
+    .kantou button {
+      margin: 0;
+      background-color: #64ccdc;
+    }
+    
+    .kantou1 button {
+      margin: 0;
+      background-color: #64ccdc;
+    }
+    
+    .tyubu button {
+      margin: 0;
+      background-color: #66ca85;
+    }
+    
+    .tyubu1 button {
+      margin: 0;
+      background-color: #66ca85;
+    }
+    
+    .kinki button {
+      margin: 0;
+      background-color: #b6d255	;
+    }
+    
+    .kinki1 button {
+      margin: 0;
+      background-color: #b6d255	;
+    }
+    
+    .tyugoku button {
+      margin: 0;
+      background-color: #fbb150;
+    }
+    
+    .tyugoku1 button {
+      margin: 0;
+      background-color: #fbb150;
+    }
+    
+    .shikoku button {
+      margin: 0;
+      background-color: #eca296;
+    }
+    
+    .shikoku button1 {
+      margin: 0;
+      background-color: #eca296;
+    }
+    
+    .kyusyu button {
+      margin: 0;
+      background-color: #fc7474;
+    }
+    
+    .kyusyu button1 {
+      margin: 0;
+      background-color: #fc7474;
+    }  
+    
+    // local-media-table
+
+table {
+    border-collapse:  collapse; 
+    width:  100%;
+    height: 100%;
+}
+ 
+th,td {
+    padding: 5px 10px;
+    text-align:  left;
+    border: 1px solid lightgray;
+}
+
+td a{
+  color:black;
+}
+
+th{
+  color:white;
+}
+
+.close-btn{
+  color:black;
+  text-align:center;
+  font-size:20px;
+}
+
+tr:nth-child(odd) th{
+    color:white;
+}
+
+#modal-hokkaidou tr:nth-child(odd) {
+    background-color: #748ce4;
+}
+
+#modal-aomori tr:nth-child(odd) {
+    background-color: #5da2e5;
+}
+#modal-akita tr:nth-child(odd) {
+    background-color: #5da2e5;
+}
+#modal-iwate tr:nth-child(odd) {
+    background-color: #5da2e5;
+}
+#modal-miyagi tr:nth-child(odd) {
+    background-color: #5da2e5;
+}
+#modal-hukushima tr:nth-child(odd) {
+    background-color: #5da2e5;
+}
+#modal-yamagata tr:nth-child(odd) {
+    background-color: #5da2e5;
+}
+
+#modal-totigi tr:nth-child(odd) {
+    background-color: #64ccdc;
+}
+#modal-gunma tr:nth-child(odd) {
+    background-color: #64ccdc;
+}
+#modal-ibaragi tr:nth-child(odd) {
+    background-color: #64ccdc;
+}
+#modal-tiba tr:nth-child(odd) {
+    background-color: #64ccdc;
+}
+#modal-tokyo tr:nth-child(odd) {
+    background-color: #64ccdc;
+}
+#modal-kanagawa tr:nth-child(odd) {
+    background-color: #64ccdc;
+}
+#modal-saitama tr:nth-child(odd) {
+    background-color: #64ccdc;
+}
+
+#modal-nigata tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-nagano tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-yamanashi tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-shizuoka tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-toyama tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-gihu tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-aiti tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-ishikawa tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+#modal-hukui tr:nth-child(odd) {
+  background-color: #66ca85;
+}
+
+#modal-shiga tr:nth-child(odd) {
+  background-color: #b6d255	;
+}
+#modal-mie tr:nth-child(odd) {
+  background-color: #b6d255	;
+}
+#modal-kyoto tr:nth-child(odd) {
+  background-color: #b6d255	;
+}
+#modal-osaka tr:nth-child(odd) {
+  background-color: #b6d255	;
+}#modal-nara tr:nth-child(odd) {
+  background-color: #b6d255	;
+}
+#modal-wakayama tr:nth-child(odd) {
+  background-color: #b6d255	;
+}
+#modal-hyogo tr:nth-child(odd) {
+  background-color: #b6d255	;
+}
+
+#modal-shimane tr:nth-child(odd) {
+  background-color: #fbb150;
+}
+#modal-hiroshima tr:nth-child(odd) {
+  background-color: #fbb150;
+}
+#modal-yamaguti tr:nth-child(odd) {
+  background-color: #fbb150;
+}
+#modal-tottori tr:nth-child(odd) {
+  background-color: #fbb150;
+}
+#modal-okayama tr:nth-child(odd) {
+  background-color: #fbb150;
+}
+
+#modal-ehime tr:nth-child(odd) {
+  background-color: #eca296;
+}
+#modal-tokushima tr:nth-child(odd) {
+  background-color: #eca296;
+}
+#modal-kagawa tr:nth-child(odd) {
+  background-color: #eca296;
+}
+#modal-kouti tr:nth-child(odd) {
+  background-color: #eca296;
+}
+
+#modal-saga tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+#modal-nagasaki tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+#modal-kagoshima tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+#modal-okinawa tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+#modal-hukuoka tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+#modal-oita tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+#modal-miyazaki tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+#modal-kumamoto tr:nth-child(odd) {
+  background-color: #fc7474;
+}
+
+// today's faborite
+
+
+// about
+.split{
+  display:flex;
+}
+
+.pic{
+  width:100%;
+}
+
+@media screen and (max-width: 1000px){
+  .none {display:none}
+}

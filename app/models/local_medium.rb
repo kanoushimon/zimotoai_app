@@ -1,0 +1,2 @@
+class LocalMedium < ApplicationRecord
+end
