@@ -17,6 +17,9 @@
 ![home](https://user-images.githubusercontent.com/71757537/103740316-59367b00-503a-11eb-85de-782e9e2b68cf.gif)
 
 
+![home](https://user-images.githubusercontent.com/71757537/103741351-3d33d900-503c-11eb-9234-cf6978b2f535.gif)
+
+
 #ローカルメディア検索
 
 
