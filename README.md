@@ -14,15 +14,7 @@
 #ホーム画面
 
 
-![home](https://user-images.githubusercontent.com/71757537/103740316-59367b00-503a-11eb-85de-782e9e2b68cf.gif)
-
-
-![home](https://user-images.githubusercontent.com/71757537/103741351-3d33d900-503c-11eb-9234-cf6978b2f535.gif)
-
-
-#ローカルメディア検索
-
-
-![local_media](https://user-images.githubusercontent.com/71757537/103740974-94857980-503b-11eb-872a-48b98dfe634e.gif)
+#ユーザー登録機能
+![register](https://user-images.githubusercontent.com/71757537/103742262-e0392280-503d-11eb-96d2-d93eb28ac0d0.gif)
 
 
