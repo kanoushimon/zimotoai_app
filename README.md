@@ -11,10 +11,26 @@
 
 以下に、サービス紹介のgifを載せているので、よろしければご視聴ください。
 
-#ホーム画面
+＃ホーム
 
+![home](https://user-images.githubusercontent.com/71757537/103742693-97ce3480-503e-11eb-8089-77cffe4edfca.gif)
 
-#ユーザー登録機能
-![register](https://user-images.githubusercontent.com/71757537/103742262-e0392280-503d-11eb-96d2-d93eb28ac0d0.gif)
+#サービス紹介
 
+![about](https://user-images.githubusercontent.com/71757537/103742857-cf3ce100-503e-11eb-9495-183a77ccb1c4.gif)
 
+#ローカルメディア検索機能
+
+![local_media](https://user-images.githubusercontent.com/71757537/103742705-9d2b7f00-503e-11eb-821e-a83254452aaf.gif)
+
+#思い出シェア機能
+
+![memory_share](https://user-images.githubusercontent.com/71757537/103742831-c6e4a600-503e-11eb-9246-8fd9672783e8.gif)
+
+#アカウント登録
+
+![register](https://user-images.githubusercontent.com/71757537/103742927-e380de00-503e-11eb-9e69-1272bb48dde5.gif)
+
+#ログイン機能
+
+![login](https://user-images.githubusercontent.com/71757537/103742974-ef6ca000-503e-11eb-84a4-313b4b6903c4.gif)
