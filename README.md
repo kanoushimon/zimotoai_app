@@ -11,8 +11,15 @@
 
 以下に、サービス紹介のgifを載せているので、よろしければご視聴ください。
 
-ホーム画面
+#ホーム画面
 
 
 ![home](https://user-images.githubusercontent.com/71757537/103740316-59367b00-503a-11eb-85de-782e9e2b68cf.gif)
+
+
+#ローカルメディア検索
+
+
+![local_media](https://user-images.githubusercontent.com/71757537/103740974-94857980-503b-11eb-872a-48b98dfe634e.gif)
+
 
