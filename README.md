@@ -12,5 +12,7 @@
 以下に、サービス紹介のgifを載せているので、よろしければご視聴ください。
 
 ホーム画面
+
+
 ![home](https://user-images.githubusercontent.com/71757537/103740316-59367b00-503a-11eb-85de-782e9e2b68cf.gif)
 
