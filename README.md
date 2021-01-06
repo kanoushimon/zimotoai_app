@@ -11,6 +11,10 @@
 
 以下に、サービス紹介のgifを載せているので、よろしければご視聴ください。
 
+#トップ画像
+
+<img width="1436" alt="home" src="https://user-images.githubusercontent.com/71757537/103743476-8fc2c480-503f-11eb-8872-246d64640669.png">
+
 ＃ホーム
 
 ![home](https://user-images.githubusercontent.com/71757537/103742693-97ce3480-503e-11eb-8089-77cffe4edfca.gif)
