@@ -5,6 +5,7 @@
 # 概要(overview)
 
 地元あいは、新しい故郷を探し、地元が大好きな人同士が繋がるためのアプリケーションです。
+
 (zimotoai is the applicaiton to find a new homeland and to connect the people who like their own local area.)
 
 
