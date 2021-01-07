@@ -66,6 +66,6 @@ $ bundle install
 
 $ rails s
 
-作者：狩野志文(author:SHIMON KANO)
+#作者(author)
 
-作成日：2020年(date of creation: 2020)
+狩野志文(SHIMON KANO)
