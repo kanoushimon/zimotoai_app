@@ -27,6 +27,10 @@
 
 ![home](https://user-images.githubusercontent.com/71757537/103742693-97ce3480-503e-11eb-8089-77cffe4edfca.gif)
 
+#ホーム（モバイル版）
+
+![mobile_home](https://user-images.githubusercontent.com/71757537/103847603-06b19900-50e4-11eb-87ed-ec821c50864d.gif)
+
 #サービス紹介
 
 ![about](https://user-images.githubusercontent.com/71757537/103742857-cf3ce100-503e-11eb-9495-183a77ccb1c4.gif)
