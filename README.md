@@ -59,8 +59,9 @@ ruby 2.6.3
 ruby on rails6
 
 # セットアップ（Setup）
-$ git clone 
-
+$ git clone https://github.com/kanoushimon/zimotoai_app.git
+$ bundle install
+$ rails s
 
 作者：狩野志文(author:SHIMON KANO)
 
