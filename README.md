@@ -67,6 +67,6 @@ $ bundle install
 
 $ rails s
 
-#作者(author)
+# 作者(author)
 
 狩野志文(SHIMON KANO)
